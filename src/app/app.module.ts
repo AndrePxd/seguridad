@@ -6,18 +6,22 @@ import {RouterOutlet} from "@angular/router";
 import { KriComponent } from './components/kri/kri.component';
 import { NgChartsModule } from 'ng2-charts';
 import {ReactiveFormsModule} from "@angular/forms";
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     KriComponent,
+    NavbarComponent,
 
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
     NgChartsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
