@@ -1,0 +1,20 @@
+<form [formGroup]="contratoForm" (ngSubmit)="onFormSubmit()">
+  <input id="fechaVencimiento" type="date" formControlName="fechaVencimiento">
+  <input id="detalleContrato" type="text" formControlName="detalleContrato">
+  <input id="motivoIncumplimiento" type="text" formControlName="motivoIncumplimiento">
+  <input id="valorNumerico" type="number" formControlName="valorNumerico">
+  <button type="submit">Agregar</button>
+  <button type="button" (click)="calcularTotal()">Calcular total</button>
+</form>
+
+<p>Total: {{ divisor }}</p>
+
+<div>
+  <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [type]="barChartType"
+          [options]="barChartOptions"
+          [legend]="barChartLegend">
+  </canvas>
+</div>
