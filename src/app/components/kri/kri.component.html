@@ -1,13 +1,36 @@
 <form [formGroup]="contratoForm" (ngSubmit)="onFormSubmit()">
+
   <input id="fechaVencimiento" type="date" formControlName="fechaVencimiento">
   <input id="detalleContrato" type="text" formControlName="detalleContrato">
   <input id="motivoIncumplimiento" type="text" formControlName="motivoIncumplimiento">
   <input id="valorNumerico" type="number" formControlName="valorNumerico">
   <button type="submit">Agregar</button>
   <button type="button" (click)="calcularTotal()">Calcular total</button>
-</form>
+  <div>
+    <label for="limiteAlerta">Límite de Alerta:</label>
+    <input id="limiteAlerta" type="number" formControlName="limiteAlerta">
+  </div>
+  <div>
+    <label for="limiteVerde">Límite Verde:</label>
+    <input id="limiteVerde" type="number" formControlName="limiteVerde">
+  </div>
+  <div>
+    <label for="limiteAmarillo">Límite Amarillo:</label>
+    <input id="limiteAmarillo" type="number" formControlName="limiteAmarillo">
+  </div>
+  <div>
+    <label for="limiteRojo">Límite Rojo:</label>
+    <input id="limiteRojo" type="number" formControlName="limiteRojo">
+  </div>
 
-<p>Total: {{ divisor }}</p>
+
+
+
+</form>
+<div>
+  <p [style.color]="totalColor">Total: {{ divisor }}</p>
+</div>
+
 
 <div>
   <canvas baseChart
